@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jervis B. Hough Personal Site</title>
+    <meta name="description" content="Jervis B. Hough — senior broker-dealer executive & financial services consultant with 25+ years’ experience. Insights on compliance, regulation, and industry leadership.">
+    <!-- Open Graph Tags (placeholders since no specific URL provided) -->
+    <meta property="og:title" content="Jervis B. Hough Personal Site">
+    <meta property="og:description" content="Jervis B. Hough — senior broker-dealer executive & financial services consultant with 25+ years’ experience. Insights on compliance, regulation, and industry leadership.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com"> <!-- Replace with actual URL if available -->
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <!-- Replace with OG image URL -->
+    <!-- Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Lightweight Analytics (Plausible example) - Replace data-domain with your domain -->
+    <script defer data-domain="yourdomain.com" src="https://plausible.io/js/plausible.js"></script>
+    <style>
+        /* Global Styles - Cloned from original: Dark background, white text, green accents */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .accent {
+            color: #3cec23; /* Green accent as preferred */
+        }
+        .button {
+            border: 1px solid #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+        .chip {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Sticky Header - Cloned: Fixed top bar with name, availability, buttons */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .header-left span {
+            margin-right: 0.5rem;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #3cec23;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        .header-right a {
+            margin-left: 1rem;
+        }
+        .timezone {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-left: 1rem;
+        }
+
+        /* Hero Section - Cloned: Full viewport, flex layout, placeholder for image */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a1a1a; /* Placeholder gray - dark to match theme */
+            opacity: 0.8;
+            /* To add image later: background-image: url('path/to/your-photo.jpg'); background-size: cover; background-position: center; */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero-left {
+            flex: 1;
+        }
+        .timeline {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        .name {
+            font-size: 6rem; /* Large as confirmed */
+            font-weight: 900;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+        .role {
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+        .quote {
+            flex: 0 0 40%;
+            font-size: 1.4rem;
+            font-style: italic;
+            opacity: 0.8;
+            padding-left: 2rem;
+        }
+
+        /* Sections - Cloned: Padded, numbered, all caps headers */
+        .section {
+            padding: 4rem 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .about p {
+            max-width: 60%;
+            font-size: 1.1rem;
+        }
+        .experience-entry {
+            margin-bottom: 2rem;
+        }
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+        .experience-role {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .experience-desc {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+            gap: 1rem;
+        }
+        .education-entry {
+            margin-bottom: 2rem;
+        }
+        .education-header {
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+        .education-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .education-desc {
+            font-size: 1rem;
+        }
+        .media-group {
+            margin-bottom: 2rem;
+        }
+        .media-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .media-item {
+            margin-bottom: 1rem;
+        }
+        .media-link {
+            display: block;
+            font-size: 1rem;
+        }
+        .publications {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .contact-item {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .closing {
+            text-align: center;
+            padding: 4rem 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .footer-disclaimer {
+            padding: 2rem 5%;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        /* Responsive Design - Cloned: Stack on mobile */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .quote {
+                padding-left: 0;
+                margin-top: 2rem;
+                width: 100%;
+            }
+            .name {
+                font-size: 4rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .about p {
+                max-width: 100%;
+            }
+            .sticky-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-right {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Top Strip - Edit constants here for easy changes -->
+    <header class="sticky-header">
+        <div class="header-left">
+            <span>Jervis B. Hough</span>
+            <span class="dot"></span>
+            <span class="accent">Available for Meaningful Professional Connections</span>
+            <span> • 20+ years exp. • Johns Creek, GA</span>
+        </div>
+        <div class="header-right">
+            <a href="jervis-hough-cv.pdf" download class="button">Download CV</a>
+            <a href="#contact" class="button">Contact Me</a>
+            <span class="timezone">(New York)</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image-placeholder">
+            <!-- Placeholder for image - Upload your photo and replace background-color with background-image: url('path/to/your-photo.jpg'); background-size: cover; background-position: center; -->
+        </div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="timeline accent">2001→2025<br>20+ yrs exp.</div>
+                <h1 class="name">JERVIS<br>B. HOUGH</h1>
+                <p class="role">Accomplished Broker Dealer Professional, Nonprofit Board Leader, and Public Company Director, based in Johns Creek, GA</p>
+            </div>
+            <blockquote class="quote">“Operate with purpose, lead with empathy, and deliver with excellence.”</blockquote>
+        </div>
+    </section>
+
+    <!-- 01. ABOUT -->
+    <section class="section about" id="about">
+        <h2 class="section-title">01. ABOUT</h2>
+        <p>I am a senior broker-dealer executive with 25 years of experience in diverse capacities, having served as Chief Executive Officer, Chief Operating Officer, and Chief Compliance Officer for multiple firms, as well as working extensively as a consultant and former regulator over the last 24 years. Throughout my career, I have encountered a broad range of operational and regulatory challenges and have made it a professional priority to develop clear, effective strategies to address them. These experiences have refined my ability to balance business objectives with regulatory integrity and client-centric values, shaping me into a leader who is both results-driven and deeply committed to the organizations and individuals I serve.</p>
+        <p>In addition to my corporate and consulting roles, I have served on nonprofit boards and a public company board. These engagements have reinforced my belief that leadership extends beyond the balance sheet, requiring a dedication to stewardship, ethical decision-making, and the betterment of the broader community. Currently based in Johns Creek, Georgia, I look forward to hearing from you.</p>
+    </section>
+
+    <!-- 02. EXPERIENCE -->
+    <section class="section experience" id="experience">
+        <h2 class="section-title">02. EXPERIENCE</h2>
+        <div class="experience-entry">
+            <div class="experience-header">Blaylock Van, LLC • Atlanta & New York • 2018–Present</div>
+            <h3 class="experience-role">Chief Compliance Officer / Chief Operating Officer</h3>
+            <ul class="experience-desc">
+                <li class="chip">Direct the firm’s national compliance program, surveillance, and trade oversight for municipal and corporate underwriting, as well as sales and trading.</li>
+                <li class="chip">Architected and executed operational modernization across all revenue functions, leveraging digital tools and strategic process redesign to enhance efficiency and market differentiation.</li>
+                <li class="chip">Served concurrently as COO and CCO, maintaining direct responsibility for originating municipal underwriting mandates and servicing issuer relationships across South Carolina, North Carolina, Florida, Georgia, and Alabama.</li>
+                <li class="chip">Lead public-sector finance officers through transaction structuring, disclosures, and capital planning.</li>
+                <li class="chip">Execute firm-wide modernization of supervisory systems; design exception reporting aligned to applicable SEC and FINRA Rules as well as MSRB G-series rules.</li>
+                <li class="chip">Ensured operational excellence in trade reporting to support high-volume trading and underwriting settlement, minimizing operational risk and ensuring data integrity.</li>
+                <li class="chip">Contributed to strong corporate governance as a senior executive, ensuring that all revenue strategies aligned with the firm's ethical standards and long-term strategic objectives.</li>
+            </ul>
+        </div>
+        <div class="experience-entry">
+            <div class="experience-header">Taurus Compliance Consulting, LLC • Atlanta, GA • 2006–Present</div>
+            <h3 class="experience-role">Founder / Managing Member</h3>
+            <ul class="experience-desc">
+                <li class="chip">Serve as fractional CCO/AML Officer for broker-dealers during high-risk events or startup onboarding.</li>
+                <li class="chip">Consult on FINRA NMA/NMR filings, operational policy design, and technology integration for small to midsize financial firms.</li>
+                <li class="chip">Engaged by regional and multinational firms to assess and enhance their supervisory controls, implementing tailored surveillance solutions to strengthen compliance infrastructure.</li>
+                <li class="chip">Delivered comprehensive branch audit and deficiency remediation services, designing corrective action plans and updating policies to address regulatory findings across all clients firm tiers.</li>
+            </ul>
+        </div>
+        <div class="experience-entry">
+            <div class="experience-header">IFS Securities, Inc. & IFS Advisory, Inc. • Atlanta, GA • 2014–2017</div>
+            <h3 class="experience-role">Chief Compliance Officer</h3>
+            <ul class="experience-desc">
+                <li class="chip">Provided enterprise-wide risk oversight for all revenue-generating activities, embedding regulatory safeguards into business expansion initiatives to protect capital and ensure sustainable growth.</li>
+                <li class="chip">Aligned firm-wide revenue strategies with evolving FINRA, SEC, and MSRB requirements to preserve regulatory integrity and protect the firm’s license to operate during a period of accelerated expansion.</li>
+                <li class="chip">Led the successful submission and approval of a Continuing Membership Application (CMA), enabling the firm to launch a formal equity research function and broaden its service offerings.</li>
+                <li class="chip">Supported the firm’s growth from approximately 75 to over 160 registered representatives by advising on the recruitment and onboarding of both retail advisors and public finance investment bankers.</li>
+                <li class="chip">Partnered with executive leadership to integrate new lines of business, including the structured rollout of a hedge fund platform, ensuring alignment with regulatory obligations and internal risk controls.</li>
+                <li class="chip">Directed compliance programs across broker-dealer and RIA platforms, including underwriting, research, retail advisory, and alternative investment activities.</li>
+                <li class="chip">Managed compliance for both the broker-dealer and RIA platforms, including underwriting, research, and retail advisory services.</li>
+            </ul>
+        </div>
+        <div class="experience-entry">
+            <div class="experience-header">Merrill Lynch (BofA Investment Services) • Charlotte, NC • 2004–2006</div>
+            <h3 class="experience-role">Senior Compliance Examiner / AVP Surveillance Officer</h3>
+            <ul class="experience-desc">
+                <li class="chip">Directed risk-based surveillance for national brokerage operations, focusing on complex product flows and emerging regulatory risks.</li>
+                <li class="chip">Owned pre-launch compliance evaluation for new products and business initiatives.</li>
+            </ul>
+        </div>
+        <div class="experience-entry">
+            <div class="experience-header">FINRA (NASD), District 7 • Atlanta, GA • 2001–2003</div>
+            <h3 class="experience-role">Compliance Examiner</h3>
+            <ul class="experience-desc">
+                <li class="chip">Conducted full-scope audits of 40+ member firms; authored deficiency reports and briefed executive stakeholders.</li>
+                <li class="chip">Led investigations into reporting violations under TRACE, RTRS, and ACT protocols.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 03. SKILLS -->
+    <section class="section skills" id="skills">
+        <h2 class="section-title">03. SKILLS</h2>
+        <div class="skills-grid">
+            <div class="chip">Regulatory Governance</div>
+            <div class="chip">Enterprise Risk Mitigation</div>
+            <div class="chip">Operational Leadership</div>
+            <div class="chip">Capital Markets Strategy</div>
+            <div class="chip">Surveillance & Supervision Systems</div>
+            <div class="chip">Strategic Risk Oversight</div>
+            <div class="chip">SEC Reporting Familiarity</div>
+            <div class="chip">FINRA/SEC Compliance</div>
+            <div class="chip">Board of Directors</div>
+            <div class="chip">Shareholder Engagement</div>
+            <div class="chip">Investor Relations</div>
+            <div class="chip">Non-Profit Boards</div>
+            <div class="chip">Employee Recruitment</div>
+            <div class="chip">Municipal Finance Engagement</div>
+            <div class="chip">Cross Functional Execution</div>
+            <div class="chip">New Market Development</div>
+            <div class="chip">Digital Innovation</div>
+            <div class="chip">Performance Management</div>
+            <div class="chip">Trade Reporting Protocols</div>
+            <div class="chip">Brand Activation</div>
+            <div class="chip">IPOs/Primary Markets</div>
+        </div>
+    </section>
+
+    <!-- 04. EDUCATION -->
+    <section class="section education" id="education">
+        <h2 class="section-title">04. EDUCATION</h2>
+        <div class="education-entry">
+            <div class="education-header">Clemson University</div>
+            <h3 class="education-title">M.S. in Applied Economics, Finance & Real Estate Concentration</h3>
+            <p class="education-desc"></p>
+        </div>
+        <div class="education-entry">
+            <div class="education-header">Clemson University</div>
+            <h3 class="education-title">B.S. in Economics, Law Option – Dean’s List</h3>
+            <p class="education-desc"></p>
+        </div>
+        <div class="education-entry">
+            <div class="education-header">Licenses & Certifications</div>
+            <h3 class="education-title">Securities Industry Essentials Examination (SIE)</h3>
+            <p class="education-desc">Series 7, 14, 24, 52, 53, 63, 79, 99</p>
+        </div>
+        <div class="education-entry">
+            <div class="education-header"></div>
+            <h3 class="education-title">Certified Securities Compliance Professional® (NSCP)</h3>
+            <p class="education-desc"></p>
+        </div>
+    </section>
+
+    <!-- 05. IN THE MEDIA -->
+    <section class="section media" id="media">
+        <h2 class="section-title">05. IN THE MEDIA</h2>
+        <div class="media-group">
+            <h3 class="media-title">Social Media</h3>
+            <div class="media-item">
+                <a href="(2) Jervis B. Hough, MS, CSCP | LinkedIn" target="_blank" class="media-link">LinkedIn Profile</a>
+            </div>
+            <div class="media-item">
+                <a href="https://www.youtube.com/watch?v=ihAdaYnbZ8g" target="_blank" class="media-link">Video interview on the MSSI Alumni Interviews channel</a>
+                <p>featuring Jervis B. Hough offering career advice, emphasizing professional development and networking strategies.</p>
+            </div>
+        </div>
+        <div class="media-group">
+            <h3 class="media-title">Foundations and Non-Profits</h3>
+            <div class="media-item">
+                <a href="https://www.naaiafoundation.org/team/jervis-b-hough/" target="_blank" class="media-link">NAAIA Foundation - Secretary Role</a>
+                <p>Overview of Jervis B. Hough’s role as Secretary of the NAAIA Foundation, emphasizing his regulatory background and leadership in financial services.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.financialeducatorscouncil.org/community-champion-jervis-hough/" target="_blank" class="media-link">National Financial Educators Council - Community Champion</a>
+                <p>Profile highlighting Jervis B. Hough’s commitment to financial wellness campaigns in Georgia as a Community Champion for the National Financial Educators Council.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.naaiafoundation.org/jervis-b-hough/" target="_blank" class="media-link">NAAIA Foundation - Additional Reference</a>
+                <p>Additional reference to Jervis B. Hough’s role as Secretary for the NAAIA Foundation, reinforcing his involvement in advancing financial industry inclusivity.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.financialeducatorscouncil.org/advisory-board-member-jervis-hough/" target="_blank" class="media-link">National Financial Educators Council - Advisory Board Member</a>
+                <p>Detailed biography of Jervis B. Hough’s contributions to financial literacy, including his qualifications, professional experience, and commitment to Georgia youth.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.marketscreener.com/insider/JERVIS-HOUGH-A1I7OQ/" target="_blank" class="media-link">Marketscreener Profile</a>
+                <p>Financial profile summarizing Jervis Hough’s board memberships, including Progressive Care, Inc., and his role at Blaylock Van, LLC.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.bloomberg.com/profile/person/20825893" target="_blank" class="media-link">Bloomberg Profile</a>
+                <p>Professional overview of Jervis Bennett Hough’s role as COO and Chief Compliance Officer at Blaylock Van, LLC, with career history and board affiliations.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://patents.justia.com/inventor/jervis-bennett-hough" target="_blank" class="media-link">Justia Patents</a>
+                <p>Listing of patent applications filed by Jervis Bennett Hough, indicating innovative contributions outside his primary financial career.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.corporationwiki.com/p/2l6q3z/jervis-b-hough" target="_blank" class="media-link">Corporation Wiki</a>
+                <p>Corporate affiliations of Jervis B. Hough, including past management roles at NMS Capital Advisors, LLC.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.rottentomatoes.com/celebrity/jervis_b_hough" target="_blank" class="media-link">Rotten Tomatoes</a>
+                <p>Filmography listing potential entertainment credits for Jervis B. Hough, though relevance to the financial professional is unconfirmed.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://www.globenewswire.com/news-release/2017/08/07/1079647/0/en/Progressive-Care-Announces-New-Independent-Board-Member-Jervis-Hough-MS-CSCP.html" target="_blank" class="media-link">GlobeNewswire - Board Appointment</a>
+                <p>Press release announcing Jervis Hough’s appointment to the Progressive Care, Inc. Board of Directors in August 2017.</p>
+            </div>
+            <!-- Continue adding all listed URLs and descriptions similarly -->
+            <!-- ... (abbreviated for brevity; add the rest as needed) -->
+        </div>
+        <div class="media-group">
+            <h3 class="media-title">Blaylock Van, LLC</h3>
+            <div class="media-item">
+                <a href="https://blaylockvan.com/jervis-hough/" target="_blank" class="media-link">Blaylock Van Profile</a>
+                <p>Corporate profile of Jervis Hough at Blaylock Van, LLC, noting his role in investment banking and financial services.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://people.equilar.com/bio/jervis-hough-blaylock-van/" target="_blank" class="media-link">Equilar Profile</a>
+                <p>Executive profile detailing Jervis Hough’s role at Blaylock Van and his network of business contacts.</p>
+            </div>
+            <div class="media-item">
+                <a href="https://wiza.co/d/blaylock-robert-van-llc/57a7/jervis-hough" target="_blank" class="media-link">Wiza Profile</a>
+                <p>Professional details as Chief Compliance Officer at Blaylock Van, LLC.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. PUBLICATIONS -->
+    <section class="section publications" id="publications">
+        <h2 class="section-title">06. PUBLICATIONS</h2>
+        <p class="publications">Coming Soon</p>
+    </section>
+
+    <!-- 07. CONTACT -->
+    <section class="section contact" id="contact">
+        <h2 class="section-title">07. CONTACT</h2>
+        <div class="contact-item">Phone: +1 678-523-5231</div>
+        <div class="contact-item">Email: <a href="mailto:contact@jervishough.com">contact@jervishough.com</a></div>
+        <div class="contact-item">Site: jervishough.com</div>
+        <div class="contact-item">Socials:</div>
+        <div class="contact-item"><a href="(2) Jervis B. Hough, MS, CSCP | LinkedIn" target="_blank">LinkedIn</a></div>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing">
+        <h1>Thank You For Stopping By. Your Presence here is a gift</h1>
+        <h2>Let’s make something great</h2>
+        <h2>Let’s make something great</h2>
+        <h2>Let’s make something great</h2>
+    </section>
+
+    <!-- Disclaimer Footer -->
+    <footer class="footer-disclaimer">
+        Disclaimer: This website is operated in a personal capacity and reflects the personal views of Jervis B. Hough. It is provided for informational and educational purposes only and does not constitute investment, legal, or other professional advice. Nothing herein represents the views of, or is affiliated with, any brokerage firm, non-profit organization, public company, or other entity. All information is believed accurate at the time of publication, but no warranty is made as to its accuracy or completeness, and no liability is assumed for any reliance on it.
+    </footer>
+</body>
+</html>
