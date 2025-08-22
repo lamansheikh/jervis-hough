@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border-top: 5px solid #3cec23;
+}
+
+.nav-item .nav-link {
+    color: #3cec23;
+}
+
+.btn {
+    background-color: #3cec23;
+    color: black;
+    border: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 450px;
+    height: 450px;
+    background: url('./profile.png') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+.content h1 {
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.content .years {
+    color: #3cec23;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+/* ==================================================================
+==================================================================
+================================================================== */
+/* about section */
+
+.about {
+    background-color: #000000e1;
+    /* black background */
+    color: #ccc;
+    /* default gray text */
+}
+
+.section-title {
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3cec23;
+    /* green accent */
+    border-left: 5px solid #3cec23;
+    padding-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.about-card {
+    background: #111;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(60, 236, 35, 0.2);
+}
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+.experience {
+    background: #000;
+    /* Black background */
+    color: #ccc;
+    /* Gray text */
+}
+
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3cec23;
+    /* Green accent */
+    margin-bottom: 2rem;
+    border-left: 5px solid #3cec23;
+    padding-left: 10px;
+}
+
+.experience-entry {
+    background: #111;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.experience-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(60, 236, 35, 0.6);
+    /* Green glow */
+}
+
+.experience-header {
+    font-weight: 600;
+    color: #3cec23;
+    margin-bottom: 0.5rem;
+}
+
+.experience-role {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.experience-desc {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-desc li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.experience-desc li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3cec23;
+    font-weight: bold;
+}
+
+.experience-desc li:hover {
+    color: #fff;
+}
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+
+.skills {
+    background-color: #000000ef;
+    color: #ccc;
+}
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3cec23;
+    border-left: 5px solid #3cec23;
+    padding-left: 10px;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.chip {
+    background: #000000;
+    border: 1px solid #222;
+    color: #ccc;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.chip:hover {
+    background: #1a1a1a;
+    color: #3cec23;
+    border-color: #3cec23;
+    box-shadow: 0 0 15px rgba(60, 236, 35, 0.6);
+    transform: translateY(-4px);
+}
+
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+
+
+/* Section Background */
+.section.education {
+  background: #000000; /* dark theme */
+  color: #ddd;
+  padding: 60px 0;
+}
+
+/* Section Title (04. EDUCATION) */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3cec23; /* light green accent */
+  border-left: 5px solid #3cec23;
+  padding-left: 12px;
+  margin-bottom: 2rem;
+}
+
+/* Education Card Style */
+.education-entry {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-entry:hover {
+  transform: translateY(-5px);
+      box-shadow: 0 0 15px rgb(58, 236, 35);
+}
+
+/* Header e.g. Clemson University / Licenses & Certifications */
+.education-header {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #3cec23; /* green accent */
+  margin-bottom: 0.5rem;
+}
+
+/* Degree / Certification Title */
+.education-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+/* Small description text */
+.education-desc {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+/* MEDIA SECTION */
+
+
+.section.media {
+   background-color: #000000ef; /* Dark background */
+  padding: 60px 20px;
+  /* border-radius: 12px; */
+  /* margin-bottom: 50px; */
+}
+
+.section.media .section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3cec23; /* Light green for section number & title */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 10px;
+}
+
+.media-group {
+  margin-bottom: 40px;
+}
+
+.media-title {
+  font-size: 22px;
+  color: #3cec23; /* Same green as theme */
+  margin-bottom: 15px;
+  border-left: 3px solid #3cec23;
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+.media-item {
+  margin-bottom: 20px;
+  background: #000000; /* Slightly lighter black */
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.media-item:hover {
+  background: #1e1e1e;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px #3cec23;
+}
+
+.media-link {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.media-link:hover {
+  color: #3cec23; /* Green hover */
+  text-decoration: underline;
+}
+
+.media-item p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.6;
+  text-align: justify; /* Justified text */
+}
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+.publications{
+    background-color: #000000; /* Dark background */
+  padding: 60px 20px;
+  /* border-radius: 12px; */
+}
+
+.section.publications .section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3cec23;
+  letter-spacing: 2px;
+  text-align: left;
+  border-left: 5px solid #3cec23;
+  padding-left: 10px;
+}
+
+/* Coming Soon Text */
+.coming-soon {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ccc;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section.publications .section-title {
+    font-size: 1.8rem;
+  }
+  .coming-soon {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section.publications .section-title {
+    font-size: 1.8rem;
+  }
+  .coming-soon {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+/* Contact Section */
+.section.contact {
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: #fff;
+}
+.section.contact .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3cec23;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-left: 5px solid #3cec23;
+  padding-left: 14px;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: #000000;
+  border: 1px solid #222;
+  border-left: 4px solid #3cec23;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.contact-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(60, 236, 35, 0.4);
+}
+.contact-card .icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.contact-card h4 {
+  font-size: 20px;
+  color: #3cec23;
+  margin-bottom: 10px;
+}
+.contact-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 0;
+}
+.contact-card a {
+  color: #3cec23;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Social Card Special */
+.contact-card.socials {
+  text-align: center;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.contact-card.socials .icon {
+  font-size: 26px;
+  margin: 0;
+}
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+
+/* Closing Section */
+.closing {
+  background: #000000;
+  color: #fff;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+.closing .thankyou {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3cec23;
+  margin-bottom: 20px;
+}
+.closing .motto {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+/* Footer Disclaimer */
+.footer-disclaimer {
+  background: #0d0d0d;
+  color: #999;
+  font-size: 13px;
+  line-height: 1.6;
+  border-top: 1px solid #222;
+  text-align: center;
+}
+.footer-disclaimer p {
+  margin: 0;
+}
+
+
+
+/* ==================================================================
+==================================================================
+================================================================== */
+
+
+
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .content h1 {
+        font-weight: 800;
+        font-size: 40px;
+    }
+
+    .content .years {
+
+        font-weight: bolder;
+        font-size: large;
+    }
+
+
+}
